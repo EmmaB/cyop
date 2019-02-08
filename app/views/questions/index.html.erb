@@ -20,9 +20,11 @@
         <div class="answers">
           <% question.answers.each do |answer| %>
             <div class="answer">
-              <%= answer.title %>
-              <% if question.votes.any? %>
-                <span class="score"><%= "█"  * ((answer.votes.count.to_f / question.votes.count.to_f) * 10).to_i %></span>
+              <% if question.live? || question.votes.any? %>
+                <%= answer.title %>
+                <% if question.votes.any? %>
+                  <span class="score"><%= "█"  * ((answer.votes.count.to_f / question.votes.count.to_f) * 10).to_i %></span>
+                <% end %>
               <% end %>
             </div>
           <% end %>
