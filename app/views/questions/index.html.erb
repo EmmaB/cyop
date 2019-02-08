@@ -1,0 +1,36 @@
+
+<div class="header">
+  <h2>Voting results</h2>
+</div>
+
+<div class="row">
+  <div class="column side"></div>
+  <div class="column middle">
+    <% @questions.each do |question| %>
+      <div class="card">
+        <div class="metadata">
+          <%= ("Choice #{question.title}") %>
+          <% if question.live? %>
+            <div class="live"><%= "LIVE" %></div>
+          <% else %>
+            <%= link_to("Activate", question_activate_path(question)) %>
+          <% end %>
+        </div>
+
+        <div class="answers">
+          <% question.answers.each do |answer| %>
+            <div class="answer">
+              <%= answer.title %>
+              <% if question.votes.any? %>
+                <span class="score"><%= "█"  * ((answer.votes.count.to_f / question.votes.count.to_f) * 10).to_i %></span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    <%end%>
+
+  </div>
+  <div class="column side"></div>
+</div>

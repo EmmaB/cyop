@@ -1,0 +1,20 @@
+
+<div class="header">
+  <h2>Vote now!</h2>
+</div>
+
+<div class="row">
+  <div class="column side"></div>
+  <div class="column middle">
+    <h3 class="number">• <%= @question&.title %> •</h3>
+    <br/>
+    <% @question.answers.each do |answer| %>
+      <%= link_to answer_vote_path(answer) do %>
+      <div class="choice_card">
+        <%= "Click to #{answer.title.downcase}" %>
+        </div>
+        <% end %>
+    <% end %>
+  </div>
+  <div class="column side"></div>
+</div>

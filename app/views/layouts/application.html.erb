@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CYOP | Choose your own presentation</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <%= link_to root_path do %>
+      <img src= "/logo.svg"/>
+    <% end %>
+    <%= yield %>
+    <div class="footer">
+      <p>Created by <%= link_to "Emma Barnes", "https://twitter.com/has_many_books" %> on Side Project afternoon provided by <%= link_to "Consonance.app", "https://consonance.app" %></p>
+    </div>
+  </body>
+</html>

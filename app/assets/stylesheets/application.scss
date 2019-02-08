@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Helvetica, Arial, sans-serif,
+               "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: #131431
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.row {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+
+.column {
+  padding: 10px;
+}
+
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.footer {
+  border-top: 1px solid #c6c6ca;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+h1, h2 {
+  font-size: 50px;
+  font-family: "Montserrat"
+}
+
+td {
+  text-align: center;
+    padding: 30px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 #efebe7;
+  padding: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 30px;
+}
+
+a  {
+  color: black;
+  text-decoration: none;
+}
+.choice_card {
+  box-shadow: 0 4px 8px 0 #efebe7;
+  padding: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 30px;
+  background-color: #FDAA29;
+  color: black;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+.metadata {
+  font-size: 12px;
+  float: left;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column
+}
+
+.answer {
+  flex: 1;
+  float: right;
+  padding: 5px;
+  align-self: flex-end;
+}
+
+.score {
+  color: #0054ff;
+  padding: 5px;
+}
+
+a {
+  color: grey
+}
+
+img {
+  width: 150px;
+  padding-top: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.number {
+  margin: 0 auto;
+  display: table;
+}
+
+.thanks {
+  margin: 0 auto;
+  display: block;
+}
+
+.live {
+  background-color: #ffe000;
+  border-radius: 50px;
+  padding: 8px;
+  margin: 10px;
+  font-weight: 800;
+}
