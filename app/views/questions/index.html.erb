@@ -21,7 +21,7 @@
           <% question.answers.each do |answer| %>
             <div class="answer">
               <% if question.live? || question.votes.any? %>
-                <%= answer.title %>
+                <%= link_to(answer.title, answer.link) %>
                 <% if question.votes.any? %>
                   <span class="score"><%= "█"  * ((answer.votes.count.to_f / question.votes.count.to_f) * 10).to_i %></span>
                 <% end %>
