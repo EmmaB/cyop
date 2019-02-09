@@ -1,0 +1,16 @@
+
+
+
+
+Question.destroy_all
+Answer.destroy_all
+Vote.destroy_all
+Question.create(title: "1", status: "live")
+Question.find_by(title: "1").answers.create(title: "Hear the back story"                              , link: "https://docs.google.com/presentation/d/1A7wjz_jXANItdbszW0u0JixmsOXdqDwlMtxWi7Us0E8/edit#slide=id.g1f88252dc4_0_83")
+Question.find_by(title: "1").answers.create(title: "Hear about a new approach to storytelling"        , link: "https://docs.google.com/presentation/d/1A7wjz_jXANItdbszW0u0JixmsOXdqDwlMtxWi7Us0E8/edit#slide=id.g4f6b7ded50_0_250")
+Question.create(title: "2")
+Question.find_by(title: "2").answers.create(title: "Hear about the technology behind Make Our Book"   , link: "https://docs.google.com/presentation/d/1A7wjz_jXANItdbszW0u0JixmsOXdqDwlMtxWi7Us0E8/edit#slide=id.g4f6b7ded50_0_271")
+Question.find_by(title: "2").answers.create(title: "Hear about the physical artefact"                 , link: "https://docs.google.com/presentation/d/1A7wjz_jXANItdbszW0u0JixmsOXdqDwlMtxWi7Us0E8/edit#slide=id.g4f6b7ded50_0_276")
+Question.create(title: "3")
+Question.find_by(title: "3").answers.create(title: "Hear about the process of building a side project", link: "https://docs.google.com/presentation/d/1A7wjz_jXANItdbszW0u0JixmsOXdqDwlMtxWi7Us0E8/edit#slide=id.g4f6b7ded50_0_281")
+Question.find_by(title: "3").answers.create(title: "Watch a demo of Make Our Book"                    , link: "https://docs.google.com/presentation/d/1A7wjz_jXANItdbszW0u0JixmsOXdqDwlMtxWi7Us0E8/edit#slide=id.g4f6b7ded50_0_388")
