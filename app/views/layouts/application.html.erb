@@ -3,6 +3,7 @@
   <head>
     <title>CYOP | Choose your own presentation</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +17,7 @@
     <% end %>
     <%= yield %>
     <div class="footer">
-      <p>Created by <%= link_to "Emma Barnes", "https://twitter.com/has_many_books" %> on Side Project afternoon provided by <%= link_to "Consonance.app", "https://consonance.app" %></p>
+      <p>Created by <%= link_to "Emma Barnes", "https://twitter.com/has_many_books" %>, in Side Project time provided by <%= link_to "Consonance.app", "https://consonance.app" %>, for a talk at <%= link_to "Confluence London", "http://confluencelondon.com/" %> about <%= link_to "Make Our Book", "https://makeourbook.com/" %>. </p>
     </div>
   </body>
 </html>
